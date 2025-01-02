@@ -102,12 +102,12 @@
         </li>
         <li class="items-center">
           <a
-            [routerLink]="['/admin/tables']"
+            [routerLink]="['/admin/resources']"
             class="text-xs uppercase py-3 font-bold block"
             routerLinkActive
-            #adminTables="routerLinkActive"
+            #adminResources="routerLinkActive"
             [ngClass]="
-              adminTables.isActive
+              adminResources.isActive
                 ? 'text-red-600 hover:text-red-700'
                 : 'text-blueGray-700 hover:text-blueGray-500'
             "
@@ -115,7 +115,7 @@
             <i
               class="fas fa-table mr-2 text-sm"
               [ngClass]="
-                adminTables.isActive ? 'opacity-75' : 'text-blueGray-300'
+              adminResources.isActive ? 'opacity-75' : 'text-blueGray-300'
               "
             ></i>
             Agregar lugares de que se van a reservar

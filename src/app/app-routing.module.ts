@@ -7,6 +7,7 @@ import { AuthComponent } from "./layouts/auth/auth.component";
 
 
 import { UsersComponent } from "./views/admin/users/users.component";
+import { ResourcesComponent } from "./views/admin/resources/resources.component";
 import { TablesComponent } from "./views/admin/tables/tables.component";
 
 // auth views
@@ -25,8 +26,9 @@ const routes: Routes = [
     component: AdminComponent,
     children: [
       { path: "users", component: UsersComponent },
+      { path: "resources", component: ResourcesComponent },
       { path: "tables", component: TablesComponent },
-      { path: "", redirectTo: "dashboard", pathMatch: "full" },
+      { path: "", redirectTo: "users", pathMatch: "full" },
     ],
   },
   // auth views

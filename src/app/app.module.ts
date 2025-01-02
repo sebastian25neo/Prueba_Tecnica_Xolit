@@ -11,6 +11,7 @@ import { AuthComponent } from "./layouts/auth/auth.component";
 
 import { UsersComponent } from "./views/admin/users/users.component";
 import { TablesComponent } from "./views/admin/tables/tables.component";
+import { ResourcesComponent } from "./views/admin/resources/resources.component";
 
 // auth views
 import { LoginComponent } from "./views/auth/login/login.component";
@@ -23,6 +24,8 @@ import { ProfileComponent } from "./views/profile/profile.component";
 
 // components for views and layouts
 import { CardUsersComponent } from "./components/cards/card-users/card-users.component";
+import { CardResourcesComponent } from "./components/cards/card-resources/card-resources.component";
+import { TableResourcesComponent } from "./components/cards/card-table-resource/card-table.component";
 
 import { AdminNavbarComponent } from "./components/navbars/admin-navbar/admin-navbar.component";
 import { AuthNavbarComponent } from "./components/navbars/auth-navbar/auth-navbar.component";
@@ -63,6 +66,7 @@ import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user
     CardPageVisitsComponent,
     CardProfileComponent,
     CardUsersComponent,
+    CardResourcesComponent,
     CardSocialTrafficComponent,
     CardStatsComponent,
     CardTableComponent,
@@ -74,7 +78,9 @@ import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user
     AdminComponent,
     AuthComponent,
     UsersComponent,
+    ResourcesComponent,
     TablesComponent,
+    TableResourcesComponent,
     LoginComponent,
     RegisterComponent,
     IndexComponent,
