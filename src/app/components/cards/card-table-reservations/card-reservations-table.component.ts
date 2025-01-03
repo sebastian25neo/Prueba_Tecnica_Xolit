@@ -64,6 +64,4 @@ export class TableReservationsComponent implements OnInit {
     }
   }
 
-  // Método para actualizar las reservas cuando se guarda una nueva
-
 }

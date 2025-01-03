@@ -36,7 +36,6 @@ export class CardReservationsComponent implements OnInit {
   async loadUsers() {
     try {
       this.users = await this.apiService.obtenerUsuarios();
-      console.log("Usuarios cargados:", this.users);
     } catch (error) {
       console.error("Error al cargar usuarios:", error);
       Swal.fire({
@@ -62,9 +61,7 @@ export class CardReservationsComponent implements OnInit {
   }
 
   async onSubmit() {
-    console.log("Formulario enviado");
-
-    this.reservationSaved.emit(); // Notificar al componente padre 
+    this.reservationSaved.emit(); // Notificar al componente padre
 
     // Validar que todos los campos son requeridos
     if (
@@ -107,14 +104,13 @@ export class CardReservationsComponent implements OnInit {
       endTime: formatDateToISO(end),
       status: this.status,
     };
-    console.log("Datos del formulario:", datosFormulario);
 
     try {
       const respuesta = await this.apiService.enviarDatosFormularioReservation(
         datosFormulario
       );
 
-     // Notificar al componente padre
+      // Notificar al componente padre
 
       // Mostrar mensaje de éxito
       Swal.fire({
@@ -122,24 +118,29 @@ export class CardReservationsComponent implements OnInit {
         title: "¡Éxito!",
         text: "Reserva creada con éxito",
       }).then(() => {
-
-      
-
         // Limpiar los datos del formulario
         this.selectedUser = null;
         this.selectedResource = null;
         this.startTime = "";
         this.endTime = "";
         this.status = "";
-       
       });
     } catch (error) {
-      console.error("Error al enviar los datos:", error);
-      Swal.fire({
-        icon: "error",
-        title: "Error",
-        text: "Hubo un error al enviar los datos",
-      });
+      // Verificar si es un error con código de estado 400 y si contiene un mensaje de error
+      if (error.status === 400 && error.response.data.message) {
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: error.response.data.message, // Mostrar el mensaje específico proporcionado por la API
+        });
+      } else {
+        // Manejo genérico para otros errores
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: "Hubo un error al enviar los datos del formulario.",
+        });
+      }
     }
   }
 }
