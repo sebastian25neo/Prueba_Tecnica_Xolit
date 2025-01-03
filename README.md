@@ -26,7 +26,7 @@ Asegúrate de tener instalado lo siguiente:
 1.  Clona este repositorio:
 
     ```bash
-    git clone [https://es.wikipedia.org/wiki/Repositorio_%28contenido_digital%29](https://es.wikipedia.org/wiki/Repositorio_%28contenido_digital%29)
+    git clone https://github.com/sebastian25neo/Prueba_Tecnica_Xolit.git
     ```
 
 2.  Navega al directorio del proyecto:
