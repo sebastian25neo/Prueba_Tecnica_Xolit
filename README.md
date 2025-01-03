@@ -1,4 +1,4 @@
-# Prueba Técnica - [Nombre del Proyecto]
+# Prueba Técnica - [Reservaciones]
 
 Este repositorio contiene el código para la prueba técnica de frontend desarrollada con Angular.
 
