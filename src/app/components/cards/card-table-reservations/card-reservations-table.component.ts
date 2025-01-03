@@ -15,6 +15,13 @@ export class TableReservationsComponent implements OnInit {
     await this.fetchReservations(); // Llamar a la función para obtener los datos
   }
 
+ // Método para ser llamado desde el evento emitido
+ updateTable(): void {
+  // Lógica para actualizar la tabla cuando el evento sea recibido
+  console.log('La tabla de reservas se ha actualizado :)');
+  this.fetchReservations();  // Actualiza los datos de la tabla
+}
+
   // Obtener la lista de reservaciones desde el backend
   async fetchReservations(): Promise<void> {
     try {
@@ -26,11 +33,7 @@ export class TableReservationsComponent implements OnInit {
     }
   }
 
-  // Método para ser llamado desde el evento emitido
-  onReservationSaved(newReservation: any) {
-    // Agregar la nueva reserva al inicio del array
-    this.reservations.unshift(newReservation);
-  }
+ 
 
   // Eliminar una reservación por su ID
   async deleteReservation(reservationId: number): Promise<void> {

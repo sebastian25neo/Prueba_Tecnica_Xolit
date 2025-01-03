@@ -64,7 +64,7 @@ export class CardReservationsComponent implements OnInit {
   async onSubmit() {
     console.log("Formulario enviado");
 
-    this.reservationSaved.emit(); 
+    this.reservationSaved.emit(); // Notificar al componente padre 
 
     // Validar que todos los campos son requeridos
     if (
@@ -123,7 +123,7 @@ export class CardReservationsComponent implements OnInit {
         text: "Reserva creada con éxito",
       }).then(() => {
 
-        
+      
 
         // Limpiar los datos del formulario
         this.selectedUser = null;
