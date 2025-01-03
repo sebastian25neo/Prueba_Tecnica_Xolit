@@ -10,7 +10,7 @@ import { AdminComponent } from "./layouts/admin/admin.component";
 import { AuthComponent } from "./layouts/auth/auth.component";
 
 import { UsersComponent } from "./views/admin/users/users.component";
-import { TablesComponent } from "./views/admin/tables/tables.component";
+import { ReservationsComponent } from "./views/admin/reservations/reservations.component";
 import { ResourcesComponent } from "./views/admin/resources/resources.component";
 
 // auth views
@@ -26,6 +26,8 @@ import { ProfileComponent } from "./views/profile/profile.component";
 import { CardUsersComponent } from "./components/cards/card-users/card-users.component";
 import { CardResourcesComponent } from "./components/cards/card-resources/card-resources.component";
 import { TableResourcesComponent } from "./components/cards/card-table-resource/card-table.component";
+import { CardReservationsComponent } from "./components/cards/card-reservations/card-reservations.component";
+import { TableReservationsComponent } from "./components/cards/card-table-reservations/card-reservations-table.component";
 
 import { AdminNavbarComponent } from "./components/navbars/admin-navbar/admin-navbar.component";
 import { AuthNavbarComponent } from "./components/navbars/auth-navbar/auth-navbar.component";
@@ -79,8 +81,10 @@ import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user
     AuthComponent,
     UsersComponent,
     ResourcesComponent,
-    TablesComponent,
+    ReservationsComponent,
     TableResourcesComponent,
+    TableReservationsComponent,
+    CardReservationsComponent,
     LoginComponent,
     RegisterComponent,
     IndexComponent,

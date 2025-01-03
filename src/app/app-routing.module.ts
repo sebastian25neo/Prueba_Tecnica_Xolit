@@ -8,7 +8,7 @@ import { AuthComponent } from "./layouts/auth/auth.component";
 
 import { UsersComponent } from "./views/admin/users/users.component";
 import { ResourcesComponent } from "./views/admin/resources/resources.component";
-import { TablesComponent } from "./views/admin/tables/tables.component";
+import { ReservationsComponent } from "./views/admin/reservations/reservations.component";
 
 // auth views
 import { LoginComponent } from "./views/auth/login/login.component";
@@ -27,7 +27,7 @@ const routes: Routes = [
     children: [
       { path: "users", component: UsersComponent },
       { path: "resources", component: ResourcesComponent },
-      { path: "tables", component: TablesComponent },
+      { path: "reservations", component: ReservationsComponent },
       { path: "", redirectTo: "users", pathMatch: "full" },
     ],
   },

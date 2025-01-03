@@ -124,12 +124,12 @@
 
         <li class="items-center">
           <a
-            [routerLink]="['/admin/tables']"
+            [routerLink]="['/admin/reservations']"
             class="text-xs uppercase py-3 font-bold block"
             routerLinkActive
-            #adminTables="routerLinkActive"
+            #adminReservations="routerLinkActive"
             [ngClass]="
-              adminTables.isActive
+            adminReservations.isActive
                 ? 'text-red-600 hover:text-red-700'
                 : 'text-blueGray-700 hover:text-blueGray-500'
             "
@@ -137,7 +137,7 @@
             <i
               class="fas fa-table mr-2 text-sm"
               [ngClass]="
-                adminTables.isActive ? 'opacity-75' : 'text-blueGray-300'
+              adminReservations.isActive ? 'opacity-75' : 'text-blueGray-300'
               "
             ></i>
             Agregar reservaciones
