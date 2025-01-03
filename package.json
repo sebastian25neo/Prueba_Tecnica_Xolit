@@ -1,8 +1,7 @@
 {
   "name": "notus-angular",
   "version": "1.1.0",
-  "description": "Prueba Técnica Xolit - Free Tailwind CSS UI Kit and Admin by Creative Tim.",
-  "repository": "https://github.com/creativetimofficial/notus-angular",
+  "description": "Prueba Técnica Xolit - Angular",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
